@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!-- Título de la aplicación -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Elementos de Interfaz de Usuario"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:elevation="4dp" />
+
+    <!-- Menú de navegación con botones -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/btnTextFields"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📝 TextFields"
+                android:layout_margin="4dp"
+                android:textSize="12sp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <Button
+                android:id="@+id/btnButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔘 Botones"
+                android:layout_margin="4dp"
+                android:textSize="12sp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <Button
+                android:id="@+id/btnSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="☑️ Selección"
+                android:layout_margin="4dp"
+                android:textSize="12sp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <Button
+                android:id="@+id/btnLists"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📋 Listas"
+                android:layout_margin="4dp"
+                android:textSize="12sp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <Button
+                android:id="@+id/btnInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ℹ️ Información"
+                android:layout_margin="4dp"
+                android:textSize="12sp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Contenedor para los fragments -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5" />
+
+</LinearLayout>

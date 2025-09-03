@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📋 Listas (ListView)"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#9C27B0"
+        android:padding="8dp"
+        android:gravity="center" />
+
+    <!-- Explicación -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Las listas permiten mostrar múltiples elementos de forma organizada. Ideales para mostrar datos dinámicos y permitir interacción."
+        android:textSize="14sp"
+        android:padding="8dp"
+        android:background="#F3E5F5"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botones de control -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnAddItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="➕ Agregar"
+            android:layout_margin="4dp" />
+
+        <Button
+            android:id="@+id/btnClearList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🗑️ Limpiar"
+            android:layout_margin="4dp" />
+
+    </LinearLayout>
+
+    <!-- Campo de texto para agregar elementos (CORREGIDO) -->
+    <EditText
+        android:id="@+id/etNewItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+    android:paddingVertical="12dp"
+    android:hint="Escribe un elemento para agregar..."
+    android:layout_marginBottom="16dp" />
+
+    <!-- Lista principal -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista de elementos:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:divider="#E0E0E0"
+        android:dividerHeight="1dp" />
+
+    <!-- Información de la lista -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F5F5F5"
+        android:padding="8dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tvItemCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Elementos: 0"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvSelectedItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Selecciona un elemento"
+            android:textSize="12sp"
+            android:gravity="end" />
+
+    </LinearLayout>
+
+</LinearLayout>

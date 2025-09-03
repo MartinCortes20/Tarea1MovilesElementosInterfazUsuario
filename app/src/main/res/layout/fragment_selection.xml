@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="☑️ Elementos de Selección"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FF9800"
+            android:padding="8dp"
+            android:gravity="center" />
+
+        <!-- Explicación -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Permiten al usuario seleccionar opciones. CheckBox para múltiples selecciones, RadioButton para una sola, Switch para activar/desactivar."
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="#FFF3E0"
+            android:layout_marginBottom="16dp" />
+
+        <!-- CheckBoxes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox (Selección múltiple):"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbOption1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📱 Desarrollo de Apps"
+            android:layout_marginBottom="4dp" />
+
+        <CheckBox
+            android:id="@+id/cbOption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💻 Desarrollo Web"
+            android:layout_marginBottom="4dp" />
+
+        <CheckBox
+            android:id="@+id/cbOption3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎮 Desarrollo de Juegos"
+            android:layout_marginBottom="16dp" />
+
+        <!-- RadioButtons -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton (Selección única):"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgColors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔴 Rojo" />
+
+            <RadioButton
+                android:id="@+id/rbGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🟢 Verde" />
+
+            <RadioButton
+                android:id="@+id/rbBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔵 Azul" />
+
+        </RadioGroup>
+
+        <!-- Switches (CORREGIDOS) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Switch (Activar/Desactivar):"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Switch
+            android:id="@+id/swNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+        android:text="🔔 Notificaciones"
+        android:layout_marginBottom="8dp" />
+
+        <Switch
+            android:id="@+id/swDarkMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+        android:text="🌙 Modo Oscuro"
+        android:layout_marginBottom="8dp" />
+
+        <Switch
+            android:id="@+id/swLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+        android:text="📍 Ubicación"
+        android:layout_marginBottom="16dp" />
+
+        <!-- Spinner (Lista desplegable - CORREGIDO) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spinner (Lista desplegable):"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerCountries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="16dp" />
+
+        <!-- Botón para mostrar selecciones -->
+        <Button
+            android:id="@+id/btnShowSelections"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mostrar Selecciones"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Área de resultado -->
+        <TextView
+            android:id="@+id/tvSelectionResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Realiza algunas selecciones y presiona el botón para ver los resultados..."
+            android:background="#F0F0F0"
+            android:padding="12dp"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>

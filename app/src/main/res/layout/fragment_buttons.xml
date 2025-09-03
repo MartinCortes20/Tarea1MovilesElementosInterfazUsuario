@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔘 Botones (Button, ImageButton)"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:padding="8dp"
+            android:gravity="center" />
+
+        <!-- Explicación -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Los botones permiten al usuario realizar acciones específicas. Son elementos interactivos esenciales en cualquier interfaz."
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="#E8F5E8"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón básico -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botón Básico:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnBasic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botón Básico"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón outlined -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botón con Borde:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnOutlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botón con Borde"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ImageButton -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botón con Imagen:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/ibPlay"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@android:drawable/ic_media_play"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Reproducir"
+                android:layout_margin="8dp"/>
+
+            <ImageButton
+                android:id="@+id/ibPause"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@android:drawable/ic_media_pause"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Pausar"
+            android:layout_margin="8dp" />
+
+            <ImageButton
+                android:id="@+id/ibStop"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@android:drawable/ic_delete"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Detener"
+                android:layout_margin="8dp" />
+
+        </LinearLayout>
+
+        <!-- Toggle Button -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botón de Alternar:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff="Desactivado"
+            android:textOn="Activado"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botones con diferentes colores -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botones con Colores:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnSuccess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Éxito"
+                android:backgroundTint="#4CAF50"
+                android:layout_margin="4dp" />
+
+            <Button
+                android:id="@+id/btnWarning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Alerta"
+                android:backgroundTint="#FF9800"
+                android:layout_margin="4dp" />
+
+            <Button
+                android:id="@+id/btnDanger"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Peligro"
+                android:backgroundTint="#F44336"
+                android:layout_margin="4dp" />
+
+        </LinearLayout>
+
+        <!-- Contador de clics -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contador de Clics:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clics: 0"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Área de resultado -->
+        <TextView
+            android:id="@+id/tvButtonResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Presiona cualquier botón para ver la acción..."
+            android:background="#F0F0F0"
+            android:padding="12dp"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>

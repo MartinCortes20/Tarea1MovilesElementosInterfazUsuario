@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ℹ️ Elementos de Información"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#607D8B"
+            android:padding="8dp"
+            android:gravity="center" />
+
+        <!-- Explicación -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estos elementos muestran información al usuario: textos, imágenes y barras de progreso para indicar estados o cargas."
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="#ECEFF1"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TextView Examples -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📝 TextView - Diferentes estilos:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Texto normal - tamaño estándar"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Texto en NEGRITA"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Texto en cursiva"
+            android:textStyle="italic"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Texto GRANDE"
+            android:textSize="20sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Texto con color azul"
+            android:textColor="#2196F3"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ImageView Examples -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🖼️ ImageView - Diferentes tamaños:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_dialog_info"
+                android:layout_margin="8dp"
+                android:background="#E3F2FD" />
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@android:drawable/star_big_on"
+                android:layout_margin="8dp"
+                android:background="#FFF3E0" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@android:drawable/ic_dialog_alert"
+                android:layout_margin="8dp"
+                android:background="#FFEBEE" />
+
+        </LinearLayout>
+
+        <!-- ProgressBar Examples -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 ProgressBar - Indicadores de progreso:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Circular progress -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Progreso circular (cargando):"
+            android:textSize="12sp"
+            android:layout_marginBottom="4dp" />
+
+        <ProgressBar
+            android:id="@+id/progressCircular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Horizontal progress -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Progreso horizontal:"
+            android:textSize="12sp"
+            android:layout_marginBottom="4dp" />
+
+        <ProgressBar
+            android:id="@+id/progressHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progress="65"
+            android:max="100"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Progreso: 65%"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Controls -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎮 Controles interactivos:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnIncreaseProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="➕ Aumentar"
+                android:layout_margin="4dp" />
+
+            <Button
+                android:id="@+id/btnDecreaseProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="➖ Disminuir"
+                android:layout_margin="4dp" />
+
+            <Button
+                android:id="@+id/btnResetProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔄 Reset"
+                android:layout_margin="4dp" />
+
+        </LinearLayout>
+
+        <!-- Dynamic content area -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📱 Contenido dinámico:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvDynamicContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Este texto cambia dinámicamente..."
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnUpdateContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔄 Actualizar Contenido"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Info summary -->
+        <TextView
+            android:id="@+id/tvInfoSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ℹ️ Los elementos de información son fundamentales para comunicar estados, mostrar datos y proporcionar retroalimentación visual al usuario."
+            android:background="#E8F5E8"
+            android:padding="12dp"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>
